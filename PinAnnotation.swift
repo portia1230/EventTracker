@@ -16,9 +16,9 @@ class PinAnnotation: NSObject, MKAnnotation{
     var title: String?
     var descriptionOfMemory: String?
     var coordinate: CLLocationCoordinate2D
-    var image: UIImage
-    var dates: [Date] = []
-    
+    var image: UIImage?
+    var counts: Int
+    var dateAdded : Date
     
     //functions
 
@@ -27,7 +27,9 @@ class PinAnnotation: NSObject, MKAnnotation{
         self.descriptionOfMemory = descriptionOfMemory
         self.coordinate = coordinate
         self.image = image
-        self.dates.append(date)
+        self.counts = 1
+        self.dateAdded = date
     }
+    
     
 }
