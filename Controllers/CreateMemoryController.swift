@@ -6,17 +6,17 @@
 //  Copyright © 2017 Portia Wang. All rights reserved.
 //
 
-import Foundation
 import UIKit
 import MapKit
 class CreateMemoryController: UIViewController, MKMapViewDelegate {
     
     
     //properties
+    
     @IBOutlet weak var addedPhoto: UIImageView!
-    
     @IBOutlet weak var locationMapView: MKMapView!
-    
+    @IBOutlet weak var uploadPhotoButton: UIButton!
+    var photoHelper = MGPhotoHelper()
     
     //functions
     override func viewDidLoad() {
@@ -24,15 +24,26 @@ class CreateMemoryController: UIViewController, MKMapViewDelegate {
         
     locationMapView.showsUserLocation = true
     locationMapView.delegate = self
-    
-    //set region for map
-    let userLocation = locationMapView.userLocation
-    let region = MKCoordinateRegionMakeWithDistance(userLocation.location!.coordinate, 2000,2000)
-    locationMapView.setRegion(region, animated: true)
-    
+        
+    uploadPhotoButton.layer.cornerRadius = 10
+    addedPhoto.layer.cornerRadius = 10
 
     }
     
-    @IBAction func addPhotoButtonTapped(_ sender: UIButton) {
+    override func viewDidAppear(_ animated: Bool) {
+        
+        //set region/zoom in for map
+        let userLocation = locationMapView.userLocation
+        let region = MKCoordinateRegionMakeWithDistance((userLocation.location?.coordinate)!, 2000, 2000)
+        locationMapView.setRegion(region, animated: true)
     }
+    
+    @IBAction func uploadPhotoButtonTapped(_ sender: UIButton) {
+        photoHelper.presentActionSheet(from: self)
+        photoHelper.completionHandler = { image in
+            self.addedPhoto.image = image
+        }
+    
+    }
+ 
 }
