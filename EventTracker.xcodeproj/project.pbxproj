@@ -18,6 +18,7 @@
 		83B4F6EC1F0C6F670081E916 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83B4F6EA1F0C6F670081E916 /* LaunchScreen.storyboard */; };
 		83B4F6ED1F0C6F670081E916 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83B4F6EB1F0C6F670081E916 /* Main.storyboard */; };
 		83B4F6EF1F0C6F800081E916 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83B4F6EE1F0C6F800081E916 /* Assets.xcassets */; };
+		83D3BE8E1F0CC64500715122 /* noImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 83D3BE8D1F0CC64500715122 /* noImage.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		83B4F6EA1F0C6F670081E916 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Storyboards/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
 		83B4F6EB1F0C6F670081E916 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Storyboards/Main.storyboard; sourceTree = SOURCE_ROOT; };
 		83B4F6EE1F0C6F800081E916 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = SOURCE_ROOT; };
+		83D3BE8D1F0CC64500715122 /* noImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noImage.png; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 		8385B8301F08BA5C00D675D1 /* EventTracker */ = {
 			isa = PBXGroup;
 			children = (
+				83D3BE8D1F0CC64500715122 /* noImage.png */,
 				83B4F6E81F0C6F4D0081E916 /* AppDelegate.swift */,
 				83B4F6D91F0C6E920081E916 /* EventTracker.xcdatamodeld */,
 				83A6B2661F09B5EE000A0558 /* Helpers */,
@@ -196,6 +199,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83D3BE8E1F0CC64500715122 /* noImage.png in Resources */,
 				83B4F6ED1F0C6F670081E916 /* Main.storyboard in Resources */,
 				83B4F6EF1F0C6F800081E916 /* Assets.xcassets in Resources */,
 				83B4F6EC1F0C6F670081E916 /* LaunchScreen.storyboard in Resources */,
